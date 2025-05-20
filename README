@@ -1,0 +1,55 @@
+# Proyecto de Desarrollo de Aplicaciones Web - Tienda de Ropa
+
+## Descripción
+
+Este proyecto es una tienda online sencilla para la venta de ropa (sudaderas y zapatillas), con funcionalidades de registro, login, y carrito de compras.
+
+Está desarrollado usando PHP, HTML, CSS y JavaScript, y se ejecuta en un servidor local (XAMPP).
+
+## Estructura del Proyecto
+
+/Proyecto-de-Desarrollo-de-Aplicaciones-Web-Venta-de-ropa
+│
+├── .vscode/ # Configuración del editor VSCode
+├── Iconos/ # Iconos para la web
+├── sudaderas/ # Imágenes de sudaderas
+├── video/ # Videos usados en el proyecto
+├── Zapatillas/ # Imágenes de zapatillas
+├── conexion.php # Archivo para conexión a base de datos
+├── index.php # Página principal con catálogo y carrito
+├── login.php # Página para login y registro
+├── registrar.php # Página para registrar nuevos usuarios
+├── script.js # JavaScript para carrito y lógica de interfaz
+├── style.css # Estilos generales de la página principal
+├── styleLogin.css # Estilos específicos para página de login
+├── Tabla.sql # Script SQL para creación y llenado de base de datos
+
+
+## Instalación y Uso
+
+1. **Requisitos:**
+   - XAMPP instalado (Apache y MySQL).
+   - Navegador actualizado.
+
+2. **Pasos:**
+
+   - Copia la carpeta del proyecto a `C:\xampp\htdocs\`.
+   - Abre el panel de control de XAMPP y arranca Apache y MySQL.
+   - Importa el archivo `Tabla.sql` en phpMyAdmin para crear la base de datos y tablas necesarias.
+   - Abre en tu navegador: `http://localhost/Proyecto-de-Desarrollo-de-Aplicaciones-Web-Venta-de-ropa/index.php`.
+   - Usa la opción de registro para crear un usuario y luego inicia sesión.
+   - Añade productos al carrito y prueba la funcionalidad.
+
+## Notas
+
+- Asegúrate de que los permisos de carpetas y archivos sean adecuados para que PHP pueda leer y escribir.
+- Puedes modificar `conexion.php` para ajustar el usuario, contraseña o nombre de la base de datos según tu configuración.
+- La carpeta `video` contiene videos que se usan de fondo en el login para mejorar la experiencia visual.
+- Los estilos están separados para mantener orden: `style.css` para la tienda y `styleLogin.css` para la página de login.
+
+## Mejoras Futuras
+
+- Seguridad mejorada en manejo de sesiones y formularios.
+- Sistema de pago e integración con pasarelas.
+- Panel administrativo para gestión de productos.
+- Mejoras en diseño responsive para móviles.

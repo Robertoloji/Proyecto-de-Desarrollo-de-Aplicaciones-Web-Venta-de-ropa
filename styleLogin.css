@@ -1,40 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/*
-font-family: 'Oswald', sans-serif;
-font-family: 'Poppins', sans-serif;
-*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     max-width: 100%;
+    background-color: #000; /* Para que el video resalte */
+    color: #fff;
+    overflow-x: hidden;
 }
 
 .header {
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    padding-top: 5px;
-    background-color: rgb(255, 255, 255);
-}
-
-menu-container {
-    text-align: center;
-
+    z-index: 10;
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 800;
-    color: black;
-    width: 100%;
+    color: #000;
 }
 
 video {
@@ -43,65 +38,125 @@ video {
     min-height: 100%;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.7);
 }
 
 .captacion {
     text-align: center;
     padding-top: 30px;
-    font-family: 'Oswald', sans-serif
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
 }
 
 .captacion-texto {
     font-size: 40px;
+    font-weight: 500;
 }
 
 .captacion-texto-titulo {
     font-size: 60px;
-    font-weight: 800
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
+/* Contenedor del formulario centrado y con sombra */
 .container-formulario {
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.42);
-    width: 400px;
-    padding: 20px;
-    margin-top: 50px;
-    margin-left: 760px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 40px;
+    margin: 80px auto 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
     text-align: center;
-    
+    color: #fff;
 }
 
-.formulario{
-
+/* Formulario en columna y estilo limpio */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     border-radius: 10px;
 }
 
+/* Título */
 .formulario h4 {
-    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
+/* Inputs con estilo moderno */
 .apartados {
-    border-radius: 10px;
-    height: 40px;
-    margin: 5px 30px;
+    height: 45px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: none;
     text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-:placeholder-shown {
-    text-align: center;
+.apartados:focus {
+    outline: none;
+    background-color: #333;
+    box-shadow: 0 0 8px #007bff;
+    color: #fff;
 }
 
+/* Placeholder centrado */
+.apartados::placeholder {
+    text-align: center;
+    color: #aaa;
+}
+
+/* Botón con efecto moderno */
 .boton {
+    height: 40px;
+    width: 100%;
     border-radius: 10px;
-    height: 30px;
-    width: 60px;
-    margin: 5px 50px;
-    color: rgb(0, 0, 0);
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
 }
 
+.boton:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 12px #0056b3;
+}
+
+/* Texto debajo del formulario */
 .formulario p {
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    .container-formulario {
+        margin: 100px 20px 40px;
+        padding: 25px 20px;
+        width: auto;
+    }
+
+    .captacion-texto-titulo {
+        font-size: 40px;
+    }
+
+    .captacion-texto {
+        font-size: 28px;
+    }
 }
